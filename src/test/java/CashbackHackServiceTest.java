@@ -1,7 +1,7 @@
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
+import org.junit.Assert;
 
-class CashbackHackServiceTest {
+public class CashbackHackServiceTest {
     @Test
     public void buyMore() {
         CashbackHackService service = new CashbackHackService();
@@ -11,7 +11,7 @@ class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 900;
 
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -23,7 +23,7 @@ class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 100;
 
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -35,7 +35,7 @@ class CashbackHackServiceTest {
         int actual = service.remain(amount);
         int expected = 0;
 
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
 
 }
